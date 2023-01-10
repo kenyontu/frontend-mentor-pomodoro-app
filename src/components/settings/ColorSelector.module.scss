@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.option {
+  position: relative;
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    &::after {
+      content: '';
+      width: 0.85rem;
+      height: 0.85rem;
+      background-color: var(--clr-very-dark-blue);
+      clip-path: polygon(0 25%, 15% 25%, 15% 60%, 100% 60%, 100% 75%, 0 75%);
+      transform: scale(0) rotate(-45deg);
+      transition: transform 120ms ease-in;
+    }
+  }
+
+  input:checked + label::after {
+    transform: scale(1) rotate(-45deg);
+  }
+
+  input:focus + label,
+  label:hover {
+    outline: 2px solid var(--clr-light-gray);
+    outline-offset: 0.25rem;
+  }
+}
+
+.colorOrange {
+  background-color: var(--clr-orange);
+}
+
+.colorAqua {
+  background-color: var(--clr-aqua);
+}
+
+.colorPurple {
+  background-color: var(--clr-purple);
+}

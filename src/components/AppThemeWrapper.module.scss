@@ -1,0 +1,28 @@
+.container {
+  &.colorOrange {
+    --clr-accent: var(--clr-orange);
+    --clr-accent-text: var(--clr-white);
+  }
+
+  &.colorAqua {
+    --clr-accent: var(--clr-aqua);
+    --clr-accent-text: var(--clr-very-dark-blue);
+  }
+
+  &.colorPurple {
+    --clr-accent: var(--clr-purple);
+    --clr-accent-text: var(--clr-very-dark-blue);
+  }
+
+  &.ffKumbhSans {
+    font-family: var(--ff-kumbh-sans);
+  }
+
+  &.ffRobotoSlab {
+    font-family: var(--ff-roboto-slab);
+  }
+
+  &.ffSpaceMono {
+    font-family: var(--ff-space-mono);
+  }
+}

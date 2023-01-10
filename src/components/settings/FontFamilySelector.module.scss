@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.option {
+  position: relative;
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9375rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--clr-dark-blue);
+    opacity: 0.7297;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: hsl(227, 52%, 96%);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input:checked + label {
+    color: var(--clr-white);
+    background-color: var(--clr-very-dark-blue);
+    opacity: 1;
+  }
+
+  input:focus + label,
+  label:hover {
+    outline: 2px solid var(--clr-light-gray);
+    outline-offset: 0.25rem;
+  }
+}
+
+.ffKumbhSans {
+  font-family: var(--ff-kumbh-sans);
+}
+
+.ffRobotoSlab {
+  font-family: var(--ff-roboto-slab);
+}
+
+.ffSpaceMono {
+  font-family: var(--ff-space-mono);
+}

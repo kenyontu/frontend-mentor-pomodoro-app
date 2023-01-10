@@ -1,0 +1,80 @@
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-orange: hsl(0, 91%, 71%);
+  --clr-aqua: hsl(182, 91%, 71%);
+  --clr-purple: hsl(284, 89%, 74%);
+  --clr-light-steel-blue: hsl(227, 100%, 92%);
+  --clr-dark-blue: hsl(235, 35%, 18%);
+  --clr-very-dark-blue: hsl(234, 39%, 14%);
+  --clr-light-gray: hsl(229, 52%, 96%);
+
+  --ff-kumbh-sans: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+  --ff-roboto-slab: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  --ff-space-mono: 'Space Mono', Arial, Helvetica, sans-serif;
+
+  --clr-accent: var(--clr-orange);
+  --clr-accent-text: var(--clr-white);
+  --ff: var(--ff-kumbh-sans);
+
+  font-size: 16px;
+  font-family: var(--ff-kumbh-sans);
+  font-weight: 700;
+
+  color: var(--clr-light-steel-blue);
+  background-color: var(--clr-dark-blue);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+input {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  min-width: 375px;
+  min-height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

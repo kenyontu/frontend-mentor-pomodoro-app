@@ -1,0 +1,18 @@
+.icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: var(--clr-light-steel-blue);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 180ms ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus,
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

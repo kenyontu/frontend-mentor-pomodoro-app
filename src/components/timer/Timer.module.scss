@@ -1,0 +1,76 @@
+.container {
+  --padding: 1rem;
+  --timer-size: 18.75rem;
+  display: block;
+  position: relative;
+  width: var(--timer-size);
+  height: var(--timer-size);
+  border-radius: 100%;
+  background: linear-gradient(-45deg, hsl(234, 33%, 27%), hsl(235, 49%, 11%));
+  box-shadow: -50px -50px 100px hsl(234, 40%, 25%),
+    50px 50px 100px hsl(235, 45%, 13%);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover .action {
+    color: var(--clr-accent);
+  }
+
+  @include tablet() {
+    --timer-size: 25.625rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: var(--clr-very-dark-blue);
+  border-radius: 100%;
+  inset: var(--padding);
+  color: var(--clr-light-steel-blue);
+}
+
+.time {
+  font-size: 4.5rem;
+
+  .digit {
+    display: inline-block;
+    width: 1ch;
+  }
+
+  @include tablet() {
+    font-size: 6.25rem;
+  }
+}
+
+.action {
+  font-size: 0.875rem;
+  letter-spacing: 13.13px;
+  margin-right: -13.13px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: color 180ms ease-in-out;
+
+  @include tablet() {
+    font-size: 1rem;
+    letter-spacing: 15px;
+  }
+}
+
+.circularProgressBar {
+  position: absolute;
+  inset: var(--padding);
+  z-index: 10;
+  transform: rotate(-88deg);
+
+  circle {
+    fill: none;
+    stroke-width: 3px;
+    stroke: var(--clr-accent);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1000ms linear;
+  }
+}
