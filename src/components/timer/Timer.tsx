@@ -34,7 +34,7 @@ export function Timer({ total }: Props) {
       className={styles.container}
       onClick={() => actionByState[timer.state].fn()}
     >
-      <div className={styles.inner}>
+      <span className={styles.inner}>
         <span className='sr-only'>{strTime}</span>
         <span className={styles.time} aria-hidden>
           <span className={styles.digit}>{strTime.charAt(0)}</span>
@@ -44,7 +44,7 @@ export function Timer({ total }: Props) {
           <span className={styles.digit}>{strTime.charAt(4)}</span>
         </span>
         <span className={styles.action}>{actionByState[timer.state].name}</span>
-      </div>
+      </span>
 
       <svg
         viewBox='0 0 100 100'

@@ -89,7 +89,7 @@ export function SettingsDialog(
             </svg>
           </button>
         </header>
-        <main>
+        <div className={styles.main}>
           <div className={styles.timeSection}>
             <h2 className={styles.sectionTitle}>Time (minutes)</h2>
             <div className={styles.timeInputs}>
@@ -139,7 +139,7 @@ export function SettingsDialog(
               onChange={setColor}
             />
           </div>
-        </main>
+        </div>
         <button
           className={styles.applyBtn}
           onClick={() =>

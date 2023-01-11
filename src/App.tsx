@@ -16,7 +16,7 @@ function App() {
   const [timer, setTimer] = useState<SlidingOption>(timers[0])
 
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <h1 className={styles.appName}>pomodoro</h1>
       <SlidingSelector
         className={styles.timerSelector}
@@ -29,7 +29,7 @@ function App() {
       {timer.id === 'shortBreak' && <ShortBreakTimer />}
       {timer.id === 'longBreak' && <LongBreakTimer />}
       <SettingsButton className={styles.settingsBtn} />
-    </div>
+    </main>
   )
 }
 
